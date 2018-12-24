@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
 
-public abstract class MVPAppCompatActivity<P extends MvpPresenter> extends RxAppCompatActivity implements MvpView {
+public abstract class MVPAppCompatActivity<P extends MvpPresenter> extends RxAppCompatActivity implements MvpView{
 
     protected P p;
 

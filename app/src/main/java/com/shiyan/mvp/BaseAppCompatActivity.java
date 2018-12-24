@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-public abstract class BaseAppCompatActivity extends MVPAppCompatActivity {
+public abstract class BaseAppCompatActivity<V extends IMvpView> extends MVPAppCompatActivity implements IMvpView {
 
     protected Context mContext;
 
