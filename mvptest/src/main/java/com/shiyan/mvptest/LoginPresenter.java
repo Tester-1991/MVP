@@ -6,9 +6,11 @@ public class LoginPresenter extends MvpPresenter<LoginContract.LoginView> implem
 
 
     public void login(){
-
+        //调用登录接口
         new LoginModle().login();
 
+        //登录成功后修改UI变化
+        getView().toast();
     }
 
 }
