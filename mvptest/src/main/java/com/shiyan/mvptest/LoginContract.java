@@ -5,16 +5,18 @@ import com.shiyan.mvp.MvpView;
 public interface LoginContract {
 
     interface LoginView extends MvpView {
-        void showButton();
+        //登录成功后 UI变化
+        void toast();
     }
 
     interface LoginPresenter{
+        //用户登录
         void login();
 
-        void userExit();
     }
 
     interface LgoinModle{
-        void getLoginInfo();
+        //用户登录
+        void login();
     }
 }

@@ -1,11 +1,13 @@
 package com.shiyan.mvptest;
 
+import android.widget.Toast;
+
 import com.shiyan.mvp.BaseAppCompatActivity;
 import com.shiyan.mvp.MvpPresenter;
 
 public class MainActivity extends BaseAppCompatActivity implements LoginContract.LoginView{
 
-    private LoginPresenter loginPresenter = new  LoginPresenter(new LoginModle());
+    private LoginPresenter loginPresenter = new  LoginPresenter();
 
     @Override
     public MvpPresenter bindPresenter() {
@@ -30,8 +32,6 @@ public class MainActivity extends BaseAppCompatActivity implements LoginContract
     @Override
     protected void initData() {
         loginPresenter.login();
-
-        loginPresenter.userExit();
     }
 
     @Override
@@ -44,10 +44,8 @@ public class MainActivity extends BaseAppCompatActivity implements LoginContract
 
     }
 
-
     @Override
-    public void showButton() {
-
+    public void toast() {
+        Toast.makeText(this,"登录成功",Toast.LENGTH_LONG).show();
     }
-
 }
